@@ -1,4 +1,4 @@
-Here's a README file for your Audio-based Emotion Detection Model:
+This is the  README file for my Audio-based Emotion Detection Model:
 
 ---
 
