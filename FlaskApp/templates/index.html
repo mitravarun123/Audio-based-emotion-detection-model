@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎧 Emotion Detection from Voice</h1>
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <label for="file-upload">Upload your voice (.wav):</label>
+            <input type="file" name="file" id="file-upload" accept=".wav" required>
+            <button type="submit">Predict Emotion</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result success">
+                Predicted Emotion: <strong>{{ prediction }}</strong>
+            </div>
+        {% endif %}
+
+        {% if error %}
+            <div class="result error">{{ error }}</div>
+        {% endif %}
+
+        {% if plot_url %}
+            <div class="plot">
+                <h2>Waveform</h2>
+                <img src="{{ plot_url }}" alt="Waveform plot">
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

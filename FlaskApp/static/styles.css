@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-3px);
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    color: #f0f0f0;
+}
+
+label {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="file"] {
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    border: none;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #5b0eca, #1e63d7);
+    transform: scale(1.05);
+}
+
+.result {
+    margin-top: 25px;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #00ffae;
+}
+
+.error {
+    color: #ff6b6b;
+}
+
+.plot {
+    margin-top: 30px;
+}
+
+.plot h2 {
+    font-weight: 400;
+    font-size: 1.4em;
+    color: #ffffffcc;
+    margin-bottom: 10px;
+}
+
+.plot img {
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.plot img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.7em;
+    }
+
+    .plot img {
+        border-radius: 10px;
+    }
+}
